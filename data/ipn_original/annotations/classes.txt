@@ -1,0 +1,16 @@
+id,code,gesture
+0,NOG,Non-gesture
+1,P1F,Pointing with one finger
+2,P2F,Pointing with two fingers
+3,C1F,Click with one finger
+4,C2F,Click with two fingers
+5,TUP,Throw up
+6,TDN,Throw down
+7,TLT,Throw left
+8,TRT,Throw right
+9,OP2,Open twice
+10,2C1,Double click with one finger
+11,2C2,Double click with two fingers
+12,ZIN,Zoom in
+13,ZOT,Zoom out
+14,GRB,Grab
