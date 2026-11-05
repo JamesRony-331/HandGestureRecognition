@@ -14,11 +14,15 @@ BASE_DIR = Path(__file__).resolve().parent
 MODEL_PATH = BASE_DIR / "models" / "hand_landmarker.task"
 
 # MediaPipe Tasks API
+#给 MediaPipe 中的类创建简短别名
+# 基础配置类，用于指定模型文件路径等基础参数
 BaseOptions = mp.tasks.BaseOptions
+# 手部关键点检测器类，用于检测手部并提取每只手的 21 个关键点
 HandLandmarker = mp.tasks.vision.HandLandmarker
+# 手部检测配置类，用于设置运行模式、最大检测手数、置信度阈值等参数
 HandLandmarkerOptions = mp.tasks.vision.HandLandmarkerOptions
+# 运行模式枚举类，支持 IMAGE（图片）、VIDEO（视频）和 LIVE_STREAM（实时异步视频流）
 RunningMode = mp.tasks.vision.RunningMode
-
 # 手部骨架连接关系
 HAND_CONNECTIONS = [
     (0, 1), (1, 2), (2, 3), (3, 4),

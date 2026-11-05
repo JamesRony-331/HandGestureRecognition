@@ -7,7 +7,7 @@ from train_ipn import Classifier, ROOT, dataset
 MODELS = ["LSTM", "GRU", "TCN"]
 
 
-@torch.inference_mode()
+@torch.inference_mode() #在模型推理时关闭自动梯度计算，并进一步减少部分张量管理开销，从而提高推理效率。
 def evaluate(kind, test_loader):
     model = Classifier(kind)
     weights = torch.load(ROOT / "checkpoints" / f"{kind}.pt", map_location="cpu")
